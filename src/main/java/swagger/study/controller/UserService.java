@@ -1,5 +1,6 @@
 package swagger.study.controller;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 import swagger.study.response.Message;
 import swagger.study.response.StatusEnum;
@@ -7,7 +8,6 @@ import swagger.study.user.RequestUserDto;
 import swagger.study.user.ResponseUserDto;
 import swagger.study.user.UserDto;
 
-import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 

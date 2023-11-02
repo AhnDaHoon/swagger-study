@@ -27,8 +27,8 @@ public class UserController {
             @ApiResponse(responseCode = "200", description = "OK", content = @Content(schema = @Schema(implementation = Message.class))),
             @ApiResponse(responseCode = "404", description = "NOT FOUND"),
     })
-    @GetMapping(value = "/{userName}", headers = { "Content-type=application/json" })
-    public ResponseEntity<?> searchUser(@Parameter(description = "회원 이름", required = true, example = "이름1") @PathVariable String userName){
+    @GetMapping(value = "/{userName}")
+    public ResponseEntity<?> searchUser(@Parameter(name = "userName", description = "회원 이름", required = true, example = "이름1") @PathVariable String userName){
         Message message = userService.searchUser(userName);
         return new ResponseEntity<>(message, null, message.getStatusEnum().getStatusCode());
     }
@@ -49,8 +49,8 @@ public class UserController {
             @ApiResponse(responseCode = "200", description = "OK", content = @Content(schema = @Schema(implementation = Message.class))),
             @ApiResponse(responseCode = "404", description = "NOT FOUND"),
     })
-    @DeleteMapping(value = "/{userName}", headers = { "Content-type=application/json" })
-    public ResponseEntity<?> deleteUser(@Parameter(description = "회원 이름", required = true, example = "이름1") @PathVariable String userName){
+    @DeleteMapping(value = "/{userName}")
+    public ResponseEntity<?> deleteUser(@Parameter(name = "userName", description = "회원 이름", required = true, example = "이름1") @PathVariable String userName){
         Message message = userService.deleteUser(userName);
         return new ResponseEntity<>(message, null, message.getStatusEnum().getStatusCode());
     }

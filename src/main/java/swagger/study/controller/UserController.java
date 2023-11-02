@@ -11,9 +11,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import swagger.study.response.Message;
+import swagger.study.service.UserService;
 import swagger.study.user.RequestUserDto;
 
-@Tag(name = "01.User")
+@Tag(name = "01.User", description = "사용자 기능")
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor

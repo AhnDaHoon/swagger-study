@@ -10,11 +10,11 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import swagger.study.controller.UserService;
+import swagger.study.service.UserService;
 import swagger.study.response.Message;
 import swagger.study.user.RequestUserDto;
 
-@Tag(name = "01.User")
+@Tag(name = "02.User2", description = "그룹 확인용으로 복사한 페이지")
 @RestController
 @RequestMapping("/user2")
 @RequiredArgsConstructor

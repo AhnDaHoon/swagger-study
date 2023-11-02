@@ -1,4 +1,4 @@
-package swagger.study.controller;
+package swagger.study.service;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;

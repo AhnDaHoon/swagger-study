@@ -16,10 +16,7 @@ import org.springframework.context.annotation.Configuration;
                         name = "AhnDaHoon",
                         email = "psycn@kakao.com"
                 )
-        ),
-        tags = {
-                @Tag(name = "01.User", description = "사용자 기능"),
-        }
+        )
 )
 @Configuration
 public class OpenApiConfig  {
